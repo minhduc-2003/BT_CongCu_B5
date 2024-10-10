@@ -65,6 +65,7 @@
             this.btnTong.TabIndex = 2;
             this.btnTong.Text = "Tổng";
             this.btnTong.UseVisualStyleBackColor = true;
+            this.btnTong.Click += new System.EventHandler(this.btnTong_Click_1);
             // 
             // label2
             // 

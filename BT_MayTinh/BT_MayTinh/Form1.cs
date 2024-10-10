@@ -56,5 +56,25 @@ namespace BT_MayTinh
                 MessageBox.Show("Vui lòng nhập số hợp lệ!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnTong_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                // Lấy giá trị từ các TextBox
+                double num1 = double.Parse(txtSoA.Text);
+                double num2 = double.Parse(txtSoB.Text);
+
+                // Tính tổng
+                double sum = num1 + num2;
+
+                // Hiển thị kết quả
+                txtKQ.Text = "Kết quả: " + sum.ToString();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Vui lòng nhập số hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
