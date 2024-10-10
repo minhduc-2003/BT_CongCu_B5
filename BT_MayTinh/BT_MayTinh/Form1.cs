@@ -22,6 +22,11 @@ namespace BT_MayTinh
             return a * b;
         }
 
+        private float TinhTong(int a, int b)
+        {
+            return a + b;
+        }
+
         private void btnTich_Click(object sender, EventArgs e)
         {
             // Kiểm tra nếu giá trị nhập là số nguyên
@@ -37,6 +42,19 @@ namespace BT_MayTinh
                 MessageBox.Show("Vui lòng nhập số hợp lệ!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnTong_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSoA.Text, out int a) && int.TryParse(txtSoB.Text, out int b))
+            {
+                float tong = TinhTong(a, b);
+                txtKQ.Text = tong.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập số hợp lệ!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
